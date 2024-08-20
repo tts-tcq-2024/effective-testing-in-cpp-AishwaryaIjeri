@@ -14,9 +14,13 @@ char size(int cms) {
 }
 
 int main() {
+    // Test boundary values and some out-of-bounds values
     assert(size(37) == 'S');
+    assert(size(38) == 'M');  // This test is meant to fail
     assert(size(40) == 'M');
+    assert(size(42) == 'M');  // This test is meant to fail
     assert(size(43) == 'L');
+    assert(size(50) == 'L');  // This test is meant to fail
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
